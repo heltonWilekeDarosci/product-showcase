@@ -1,6 +1,11 @@
 <h2>{{ title }}</h2>
 
-<table>
+<table class="product__table">
+    <tr>
+        <th>Id Number
+        <th>Name</th>
+        <th>Price $</th>
+    </tr>
     <tr *ngFor="let product of products">
         <td>
             {{ product.id }}
@@ -14,7 +19,7 @@
     </tr>
 </table>
 
-<button (click)="showTitle()">Click me!</button>
+<button class='btn' (click)="showTitle()">Click me!</button>
 
 <!-- 
     

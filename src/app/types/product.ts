@@ -5,4 +5,4 @@ export interface Product {
     status: ProductStatus
 }
 
-export type ProductStatus = 'sold' | 'in-stock'
+export type ProductStatus = 'sold-out' | 'in-stock'

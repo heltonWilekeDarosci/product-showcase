@@ -10,13 +10,28 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [{
     id: 1,
-    name: "Bolacha",
-    price: 30,
-    status: 'sold'
+    name: "Cookies",
+    price: 3.50,
+    status: 'sold-out'
   }, {
     id: 2,
-    name: "Biscoito",
-    price: 40,
+    name: "Ham",
+    price: 5.50,
+    status: 'in-stock'
+  }, {
+    id: 3,
+    name: "Cheese",
+    price: 4.0,
+    status: 'in-stock'
+  }, {
+    id: 4,
+    name: "Red Wine",
+    price: 7.50,
+    status: 'sold-out'
+  }, {
+    id: 5,
+    name: "Chocolate bar",
+    price: 2.50,
     status: 'in-stock'
   }]
 
