@@ -1,6 +1,30 @@
-<p>product-list works!</p>
+<h2>{{ title }}</h2>
+
+<table>
+    <tr *ngFor="let product of products">
+        <td>
+            {{ product.id }}
+        </td>
+        <td>
+            {{ product.name }}
+        </td>
+        <td>
+            {{ product.price }}
+        </td>
+    </tr>
+</table>
+
+<button (click)="showTitle()">Click me!</button>
+
+<!-- 
+    
+0. Study class and structures of them / see about 'tipagem'
 
 1. Declarar o componente no app.component.html
 Fazer uma tabela
 As linhas devem ser iteradas por um loop (for) do angular
 Como criar/iniciar uma variável (array = objeto)
+
+2. Ao clique Add mais um item a lista
+
+3. use condition of directives '*ngIf' -->
