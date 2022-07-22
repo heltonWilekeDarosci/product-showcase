@@ -1,5 +1,8 @@
 <h2>{{ title }}</h2>
 
+<input class="add__text" type="text" [(ngModel)]="addProduct" title="Add a product's name here"/>
+<input class="add__btn" type="button" value="Add" (click)="addProductBtn()" title="Click here to add the products name to the list"/>
+
 <table class="product__table">
     <tr>
         <th>Id Number
@@ -17,19 +20,17 @@
             {{ product.price }}
         </td>
     </tr>
+    <tr *ngFor="let addProduct of addProducts">
+        <td>
+            {{ addProduct.id }}
+        </td>
+        <td>
+            {{ addProduct.name }}
+        </td>
+        <td>
+            {{ addProduct.price }}
+        </td>
+    </tr>
 </table>
 
-<button class='btn' (click)="showTitle()">Click me!</button>
-
-<!-- 
-    
-0. Study class and structures of them / see about 'tipagem'
-
-1. Declarar o componente no app.component.html
-Fazer uma tabela
-As linhas devem ser iteradas por um loop (for) do angular
-Como criar/iniciar uma variável (array = objeto)
-
-2. Ao clique Add mais um item a lista
-
-3. use condition of directives '*ngIf' -->
+<!-- STUDY THE HERO EXAMPLE ON THE ANGULAR DOCUMENTATION -->

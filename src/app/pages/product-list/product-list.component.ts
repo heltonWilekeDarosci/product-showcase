@@ -37,13 +37,19 @@ export class ProductListComponent implements OnInit {
 
   title: string | undefined
 
+  addProduct:string='';
+  addProducts:Array<string> = new Array();
+
   constructor() {}
 
   ngOnInit(): void {
     this.title = 'Product List'
   }
 
-  showTitle() {
-    console.log(this.title)
+  addProductBtn(){
+    this.addProducts.push(this.addProduct);
+    this.addProduct='';
   }
 }
+
+// STUDY THE HERO EXAMPLE ON THE ANGULAR DOCUMENTATION
