@@ -4,33 +4,28 @@
 <input class="add__btn" type="button" value="Add" (click)="addProductBtn()" title="Click here to add the products name to the list"/>
 
 <table class="product__table">
-    <tr>
-        <th>Id Number
+    <thead>
+        <th>Id Number</th>
         <th>Name</th>
         <th>Price $</th>
-    </tr>
-    <tr *ngFor="let product of products">
-        <td>
-            {{ product.id }}
-        </td>
-        <td>
-            {{ product.name }}
-        </td>
-        <td>
-            {{ product.price }}
-        </td>
-    </tr>
-    <tr *ngFor="let addProduct of addProducts">
-        <td>
-            {{ addProduct.id }}
-        </td>
-        <td>
-            {{ addProduct.name }}
-        </td>
-        <td>
-            {{ addProduct.price }}
-        </td>
-    </tr>
+        <th>Status</th>
+    </thead>
+    <tbody *ngFor="let product of products">
+        <tr>
+            <td>
+              {{ product.id }}
+            </td>
+            <td>
+              {{ product.name }}
+            </td>
+            <td>
+              {{ product.price }}
+            </td>
+            <td>
+              {{ product.status }}
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 <!-- STUDY THE HERO EXAMPLE ON THE ANGULAR DOCUMENTATION -->

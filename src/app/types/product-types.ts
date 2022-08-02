@@ -6,3 +6,4 @@ export interface Product {
 }
 
 export type ProductStatus = 'sold-out' | 'in-stock'
+

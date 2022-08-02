@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/types/product';
+import { Product } from 'src/app/types/product-types';
+import { products } from './products-list';
 
 @Component({
   selector: 'app-product-list',
@@ -8,37 +9,12 @@ import { Product } from 'src/app/types/product';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[] = [{
-    id: 1,
-    name: "Cookies",
-    price: 3.50,
-    status: 'sold-out'
-  }, {
-    id: 2,
-    name: "Ham",
-    price: 5.50,
-    status: 'in-stock'
-  }, {
-    id: 3,
-    name: "Cheese",
-    price: 4.0,
-    status: 'in-stock'
-  }, {
-    id: 4,
-    name: "Red Wine",
-    price: 7.50,
-    status: 'sold-out'
-  }, {
-    id: 5,
-    name: "Chocolate bar",
-    price: 2.50,
-    status: 'in-stock'
-  }]
+  products = products;
 
   title: string | undefined
 
-  addProduct:string='';
-  addProducts:Array<string> = new Array();
+  addProduct: string = '';
+  addProducts: Array<string> = new Array();
 
   constructor() {}
 
@@ -46,7 +22,7 @@ export class ProductListComponent implements OnInit {
     this.title = 'Product List'
   }
 
-  addProductBtn(){
+  addProductBtn() {
     this.addProducts.push(this.addProduct);
     this.addProduct='';
   }
