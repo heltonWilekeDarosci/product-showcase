@@ -17,3 +17,4 @@ export class ProductListComponent implements OnInit {
 }
 
 // STUDY THE HERO EXAMPLE ON THE ANGULAR DOCUMENTATION
+
