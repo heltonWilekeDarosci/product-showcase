@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-product-form',
+  selector: 'product-form',
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.scss']
 })
-export class ProductFormComponent implements OnInit {
 
-  constructor() { }
+export class ProductFormComponent {
 
-  ngOnInit(): void {
+  submit(validProduct: any) {
+    console.log('Form submitted', validProduct);
   }
 
 }

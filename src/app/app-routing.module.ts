@@ -1,3 +1,4 @@
+import { ProductFormComponent } from './pages/product-form/product-form.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';

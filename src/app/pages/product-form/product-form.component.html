@@ -1,0 +1,71 @@
+<pre></pre>
+<div class="container">
+  <form #validProduct="ngForm" (ngSubmit)="submit(validProduct)" class="col-md-4">
+    <h4 class="page-header">Product list</h4>
+    <div class="form-group">
+      <label for="idNumber">ID Number</label>
+      <input
+        ngModel
+        name="idNumber"
+        id="idNumber"
+        #idNumber="ngModel"
+        type="text"
+        class="form-control"
+        required>
+      <div class="alert alert-danger" *ngIf="idNumber.touched && !idNumber.valid">
+        ID number required.
+      </div>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="productName">Name</label>
+      <input
+        ngModel
+        name="productName"
+        id="productName"
+        #productName="ngModel"
+        type="text"
+        class="form-control"
+        required>
+        <div class="alert alert-danger" *ngIf="productName.touched && !productName.valid">
+          Product name required.
+        </div>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="price">Price $</label>
+      <input
+        ngModel
+        name="price"
+        id="price"
+        #price="ngModel"
+        type="text"
+        class="form-control"
+        placeholder="0.0"
+        required>
+        <div class="alert alert-danger" *ngIf="price.touched && !price.valid">
+          Price required.
+        </div>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="productStatus">Status</label>
+      <select
+        ngModel
+        name="status"
+        id="status"
+        #status="ngModel"
+        type="text"
+        class="form-control"
+        required>
+        <option>sold-out</option>
+        <option>in-stock</option>
+      </select>
+      <div class="alert alert-danger" *ngIf="status.touched && !status.valid">
+        Status required.
+      </div>
+    </div>
+    <pre></pre>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
